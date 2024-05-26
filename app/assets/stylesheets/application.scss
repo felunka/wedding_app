@@ -1,0 +1,93 @@
+.card {
+  --bs-border-radius: 0px;
+}
+
+.h1 {
+  font-family: 'Modern No 20';
+}
+
+@import "bootstrap";
+
+@font-face {
+  font-family: 'Modern No 20';
+  src: url('MOD20.TTF');
+}
+
+#head-wrapper {
+  height: 100vh;
+  #hero-head {
+    height: 85%;
+    font-family: 'Modern No 20';
+    color: #174e9d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    .image-stack {
+      position: relative;
+      top: 0;
+      left: 0;
+      height: 40vh;
+      width: 40vh;
+  
+      img {
+        position: absolute;
+        top: -20vh;
+        left: -38vh;
+        width: 120vh;
+        z-index: 10;
+      }
+      #blue-box {
+        position: relative;
+        top: 0;
+        left: 0;
+        padding: 20%;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        border: 2px solid #174e9d;
+      }
+    }
+  }
+
+  #wave {
+    height: 15%;
+    display: flex;
+    align-items: end;
+  }
+}
+
+.bg-rose {
+  background-color: #174e9d;
+}
+
+#content {
+  position: relative;
+  margin-top: -2px;
+  color: #fff;
+
+  .container * {
+    z-index: 30;
+  }
+
+  #wave img {
+    width: 130%;
+    margin-left: -10%;
+  }
+}
+
+#content::after {
+  background-image: image-url('pattern.svg');
+  background-repeat: repeat;
+  position: absolute;
+  content: '';
+  height: 1000px;
+  width: 100%;
+  top: -156px;
+  z-index: 20;
+}
+
+

@@ -1,0 +1,28 @@
+require:
+  - rubocop-rails
+
+AllCops:
+  TargetRubyVersion: 3.2.4
+  NewCops: enable
+
+# Disable specific rules
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Metrics/BlockLength:
+  Enabled: false
+
+Metrics/MethodLength:
+  Enabled: false
+
+Metrics/AbcSize:
+  Enabled: false
+
+Rails:
+  Enabled: true
+
+Layout/LineLength:
+  Max: 150
