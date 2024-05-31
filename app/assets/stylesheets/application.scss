@@ -1,10 +1,8 @@
-.card {
-  --bs-border-radius: 0px;
-}
-
 .h1 {
   font-family: 'Modern No 20';
 }
+
+$primary: #174e9d;
 
 @import "bootstrap";
 
@@ -13,8 +11,13 @@
   src: url('MOD20.TTF');
 }
 
+body {
+  overflow-x: hidden;
+}
+
 #head-wrapper {
   height: 100vh;
+  overflow: hidden;
   #hero-head {
     height: 85%;
     font-family: 'Modern No 20';
@@ -60,22 +63,25 @@
   }
 }
 
-.bg-rose {
-  background-color: #174e9d;
-}
-
 #content {
   position: relative;
   margin-top: -2px;
   color: #fff;
 
+  .bg-primary {
+    margin-bottom: -1px;
+  }
+
   .container * {
     z-index: 30;
   }
 
-  #wave img {
-    width: 130%;
-    margin-left: -10%;
+  #wave {
+    overflow: hidden;
+    img {
+      width: 130%;
+      margin-left: -10%;
+    }
   }
 }
 
@@ -84,9 +90,9 @@
   background-repeat: repeat;
   position: absolute;
   content: '';
-  height: 1000px;
+  height: 110%;
   width: 100%;
-  top: -156px;
+  top: -10%;
   z-index: 20;
 }
 

@@ -11,7 +11,7 @@
     = image_tag('wave-in.svg')
 
 #content
-  .bg-rose
+  .bg-primary
     .container.py-3
       .text-center.py-5
         .h1
@@ -20,22 +20,32 @@
           Albani Kirche & Hotel Freigeist
         .h3  
           Göttingen
-      .row.py-5
-        .col
-          .text-center
-            .h1
-              Noch 5 Tage
-        .col-2
-          .text-center
-            %button.btn.btn-outline-primary.btn-lg
-              Anmeldung
-        .col-2
-          .text-center
-            %button.btn.btn-outline-primary.btn-lg
-              Hotel
-      .card
-        .card-body
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, 
+      .row.align-items-center.py-5
+        .col-md-3
+          .h1
+            Noch 5 Tage
+          
+          %button.btn.btn-dark.btn-lg.my-2
+            Anmeldung
+          %button.btn.btn-dark.btn-lg.my-2
+            Hotel
+        .col-md
+          .card
+            .card-body
+              .h1
+                Liebe Freunde und Familie,
+              %br
+              wir freuen uns unglaublich, diesen besonderen Moment mit euch zu teilen. Am 7.6.2025 möchten wir unseren großen Tag feiern und es wäre uns eine Ehre, wenn ihr dabei seid.
+              %br
+              Um die Planung für uns ein wenig einfacher zu gestalten, bitten wir euch, euch hier auf unserer Website für die Hochzeit anzumelden (RSVP). Hier findet ihr alle wichtigen Informationen zu unserer Feier, einschließlich Ort, Zeitplan und Unterkunftsmöglichkeiten.
+              %br
+              Eure Anwesenheit bedeutet uns sehr viel und wir können es kaum erwarten, diesen besonderen Tag gemeinsam mit euch zu verbringen.
+              %br
+              Herzlichst,
+              %br
+              .h1
+                Josepha & Felix
+            
   #wave
     = image_tag('wave-out.svg')
   
@@ -45,42 +55,101 @@
       Programm
     .h3
       Feitag
-  .row.py-3
-    .col.d-flex.flex-column.justify-content-center.align-items-center
-      .h1
+  .row.align-items-center.py-3
+    .col.text-center
+      .h3
         ab 17 Uhr
       = image_tag('travel')
     .col
-      .card
+      .card.border-primary
         .card-body
           .h5.card-title
             Anreise
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita 
-  .text-center
+          .h6.card-subtitle.mb-2.text-body-secondary
+            Benfeyweg 3, 37075 Göttingen
+          Lasst uns das Hochzeitswochenende ganz entspannt einläuten! Wer mag, ist am Freitagabend herzlich zu einem lockeren Get Together bei Sabine und Andreas eingeladen. Es wird ein leckeres BBQ im Garten geben, wo ihr euch flexibel nach eurer Anreise dazu gesellen könnt. Kommt vorbei und genießt den Start ins Wochenende mit uns!
+  .text-center.my-5
     .h3
       Samstag
-  .row.py-3
+  .row.align-items-center.py-3
     .col
-      .card
+      .card.border-primary
         .card-body
           .h5.card-title
             Kirche
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita 
-    .col.d-flex.flex-column.justify-content-center.align-items-center
-      .h1
+          .h6.card-subtitle.mb-2.text-body-secondary
+            Albani Kirche, Albanikirchhof 1A, 37073 Göttingen
+          Wir freuen uns riesig, euch zur Trauung in der wunderschönen Albani Kirche begrüßen zu dürfen. Hier geben wir uns das Ja-Wort und würden diesen besonderen Moment gerne mit euch teilen.
+    .col.text-center
+      .h3
         11 Uhr
       = image_tag('church')
-  .row.py-3
-    .col.d-flex.flex-column.justify-content-center.align-items-center
-      .h1
+
+  .row.align-items-center.py-3
+    .col.text-center
+      .h3
         13 Uhr
       = image_tag('cake')
     .col
-      .card
+      .card.border-primary
         .card-body
           .h5.card-title
             Bubbles & Cake
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita 
-
-.text-center
-  = image_tag('icon.png')
+          .h6.card-subtitle.mb-2.text-body-secondary
+            Hotel Freigeist Innenstadt, Berliner Str. 30, 37073 Göttingen
+          Auf eine erfolgreiche Trauung muss angestoßen werden. Im Hotel gibt es Sekt und Kuchen, und wenn das Wetter mitspielt, feiern wir bei schöner Aussicht auf der Dachterrasse. Hier ist ein guter Moment für gemeinsame Bilder. 📸
+  .row.align-items-center.py-3
+    .col
+      .card.border-primary
+        .card-body
+          .h5.card-title
+            Einmal durchatmen!
+          .h6.card-subtitle.mb-2.text-body-secondary
+            = '-'
+          Nutzt die Pause und sammelt neue Energie für die Feierlichkeiten am Abend. Hotelgästen steht der gesamte Wellnessbereich zur Verfügung 😉 Wer motiviert ist, kann in der Zeit die schöne Göttinger Altsadt erkunden.
+    .col.text-center
+      .h3
+        14 Uhr
+      = image_tag('church')
+  .row.align-items-center.py-3
+    .col.text-center
+      .h3
+        19 Uhr
+      = image_tag('cake')
+    .col
+      .card.border-primary
+        .card-body
+          .h5.card-title
+            Festliches Abendessen
+          .h6.card-subtitle.mb-2.text-body-secondary
+            Hotel Freigeist Innenstadt, Berliner Str. 30, 37073 Göttingen
+          Am Abend erwartet euch ein festliches Dinner im Hotel. Die Köche des Intuu Restaurants werden uns ein spannendes Menü zaubern aus den Landesküchen von Japan und Südamerika.
+  .row.align-items-center.py-3
+    .col
+      .card.border-primary
+        .card-body
+          .h5.card-title
+            Party
+          .h6.card-subtitle.mb-2.text-body-secondary
+            Hotel Freigeist Innenstadt, Berliner Str. 30, 37073 Göttingen
+          Jetzt wird gefeiert! Nach dem Abendessen geht die Party los und wir tanzen, lachen und feiern bis die Füße schmerzen. Die Hotelparty endet offiziell um 4 Uhr, aber wer noch nicht genug hat, kann mit uns im Savoy weiterfeiern. Let's fetz!
+    .col.text-center
+      .h3
+        22 Uhr
+      = image_tag('church')
+  .text-center.my-5
+    .h3
+      Sonntag
+  .row.align-items-center.py-3
+    .col.text-center
+      .h3
+        ab 9 Uhr
+      = image_tag('cake')
+    .col
+      .card.border-primary
+        .card-body
+          .h5.card-title
+            Gemeinsames Frühstück
+          .h6.card-subtitle.mb-2.text-body-secondary
+            Hotel Freigeist Innenstadt, Berliner Str. 30, 37073 Göttingen
+          Lasst uns zusammen in den neuen Tag starten. Nach einer langen Nacht lassen wir das Wochenende gemütlich ausklingen. Am Sonntagmorgen laden wir euch zu einem gemeinsamen Frühstück im Hotel ein, bevor wir uns wieder auf den Heimweg machen.
