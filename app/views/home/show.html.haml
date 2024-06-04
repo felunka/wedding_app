@@ -1,12 +1,12 @@
 #head-wrapper
   #hero-head
     .image-stack
-      = image_tag('Vorderseite.png')
-      #blue-box
+      #blue-box.border.border-primary.border-2
         .h1
           Josepha & Felix
-        .text-end
+        .byline
           heiraten
+      = image_tag('flower_overlay.png')
   #wave
     = image_tag('wave-in.svg')
 
@@ -27,22 +27,20 @@
           
           %button.btn.btn-dark.btn-lg.my-2
             Anmeldung
-          %button.btn.btn-dark.btn-lg.my-2
-            Hotel
+          = button_to 'Hotel', 'https://www.freigeist-hotels.de/de/freigeist-hotels/freigeist-goettingen-innenstadt/', class: 'btn btn-dark btn-lg my-2', target: '_blank'
         .col-md
           .card
             .card-body
               .h1
                 Liebe Freunde und Familie,
-              %br
-              wir freuen uns unglaublich, diesen besonderen Moment mit euch zu teilen. Am 7.6.2025 möchten wir unseren großen Tag feiern und es wäre uns eine Ehre, wenn ihr dabei seid.
-              %br
-              Um die Planung für uns ein wenig einfacher zu gestalten, bitten wir euch, euch hier auf unserer Website für die Hochzeit anzumelden (RSVP). Hier findet ihr alle wichtigen Informationen zu unserer Feier, einschließlich Ort, Zeitplan und Unterkunftsmöglichkeiten.
-              %br
-              Eure Anwesenheit bedeutet uns sehr viel und wir können es kaum erwarten, diesen besonderen Tag gemeinsam mit euch zu verbringen.
-              %br
-              Herzlichst,
-              %br
+              %p
+                wir freuen uns unglaublich, diesen besonderen Moment mit euch zu teilen. Am 7.6.2025 möchten wir unseren großen Tag feiern und es wäre uns eine Ehre, wenn ihr dabei seid.
+                %br
+                Um die Planung für uns ein wenig einfacher zu gestalten, bitten wir euch, euch hier auf unserer Website für die Hochzeit anzumelden (RSVP). Hier findet ihr alle wichtigen Informationen zu unserer Feier, einschließlich Ort, Zeitplan und Unterkunftsmöglichkeiten.
+                %br
+                Eure Anwesenheit bedeutet uns sehr viel und wir können es kaum erwarten, diesen besonderen Tag gemeinsam mit euch zu verbringen.
+                %br
+                Herzlichst,
               .h1
                 Josepha & Felix
             
@@ -53,7 +51,7 @@
   .text-center
     .h1
       Programm
-    .h3
+    .h3.my-5
       Feitag
   .row.align-items-center.py-3
     .col.text-center
@@ -110,12 +108,12 @@
     .col.text-center
       .h3
         14 Uhr
-      = image_tag('church')
+      = image_tag('refresh')
   .row.align-items-center.py-3
     .col.text-center
       .h3
         19 Uhr
-      = image_tag('cake')
+      = image_tag('food')
     .col
       .card.border-primary
         .card-body
@@ -136,7 +134,7 @@
     .col.text-center
       .h3
         22 Uhr
-      = image_tag('church')
+      = image_tag('party')
   .text-center.my-5
     .h3
       Sonntag
