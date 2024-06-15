@@ -1,0 +1,15 @@
+de:
+  simple_form:
+    "yes": 'Ja'
+    "no": 'Nein'
+    required:
+      text: 'Pflichtfeld'
+      mark: '*'
+    error_notification:
+      default_message: 'Bitte beachten Sie folgenden Fehler:'
+    options:
+      defaults:
+        food_selection:
+          carnivores: 'Alles'
+          vegeratian: 'Vegetarisch'
+          vegan: 'Vegan'

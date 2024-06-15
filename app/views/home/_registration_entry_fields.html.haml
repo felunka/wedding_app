@@ -1,0 +1,5 @@
+.nested-fields
+  = f.input :name
+  = f.input :food_selection, collection: RegistrationEntry.food_selections.symbolize_keys.keys, include_blank: false, include_hidden: false
+  = f.input :comment, placeholder: 'z.B. Allergien'
+  = f.input :all_days

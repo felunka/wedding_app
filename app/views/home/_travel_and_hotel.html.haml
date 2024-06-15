@@ -1,0 +1,39 @@
+.container.py-3
+  .h1
+    Anreise & Hotel
+  .row
+    .col-md-4.py-3
+      .card.border-primary.h-100
+        .card-body
+          %p
+            Wir freuen uns sehr darauf, euch bald in Göttingen begrüßen zu dürfen! Das Hotel "Freigeist"
+            liegt in fußläufiger Entfernung vom ICE-Bahnhof Göttingen, und auch die Kirche ist bequem zu
+            Fuß vom Hotel aus erreichbar. Daher empfehlen wir die Anreise per Zug. Für diejenigen, die mit
+            dem Auto kommen, steht im Hotel eine Tiefgarage zur Verfügung. Das BBQ am Freitagabend ist
+            ebenfalls zu Fuß erreichbar (ca. 15-20 Minuten bergauf), alternativ könnt ihr den Stadtbus
+            nutzen oder Fahrgemeinschaften bilden.
+          %p
+            Im Hotel haben wir bereits Zimmer für euch Reserviert.
+            %strong
+              Bitte gebt umbedingt beim Buchen an, dass ihr für die "Party Josepha&Felix" buchen möchtet.
+            Ihr bekommt einen besseren Preis und einige weitere Vorteile. Zusätzlich helft ihr uns dabei auch noch.
+          = button_to 'Hotel buchen', 'https://www.freigeist-hotels.de/de/freigeist-hotels/freigeist-goettingen-innenstadt/', class: 'btn btn-dark btn-lg my-2', target: '_blank'
+    .col-md.py-3
+      #hotelCarousel.carousel.slide{"data-bs-ride" => "true"}
+        .carousel-indicators
+          %button.active{"aria-current" => "true", "aria-label" => "Slide 1", "data-bs-slide-to" => "0", "data-bs-target" => "#hotelCarousel", type: "button"}
+          %button{"aria-label" => "Slide 2", "data-bs-slide-to" => "1", "data-bs-target" => "#hotelCarousel", type: "button"}
+          %button{"aria-label" => "Slide 3", "data-bs-slide-to" => "2", "data-bs-target" => "#hotelCarousel", type: "button"}
+        .carousel-inner
+          .carousel-item.active
+            = image_tag('hotel/freigeist_outside', class: 'd-block w-100')
+          .carousel-item
+            = image_tag('hotel/freigeist_room', class: 'd-block w-100')
+          .carousel-item
+            = image_tag('hotel/freigeist_roof', class: 'd-block w-100')
+        %button.carousel-control-prev{"data-bs-slide" => "prev", "data-bs-target" => "#hotelCarousel", type: "button"}
+          %span.carousel-control-prev-icon{"aria-hidden" => "true"}
+          %span.visually-hidden Zurück
+        %button.carousel-control-next{"data-bs-slide" => "next", "data-bs-target" => "#hotelCarousel", type: "button"}
+          %span.carousel-control-next-icon{"aria-hidden" => "true"}
+          %span.visually-hidden Weiter

@@ -1,0 +1,14 @@
+#rsvp
+  .container.py-3
+    .h1
+      Anmeldung
+    .card.border-primary.h-100
+      .card-body
+        = simple_form_for @registration do |f|
+          = f.fields_for :registration_entries do |entry|
+            = render 'registration_entry_fields', f: entry
+          .links.my-3
+            = link_to_add_association f, :registration_entries, class: 'btn btn-primary' do
+              = 'Person Hinzufügen'
+          = f.submit 'Absenden', class: 'btn btn-primary mt-2'
+          

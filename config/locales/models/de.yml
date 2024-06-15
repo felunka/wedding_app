@@ -1,0 +1,11 @@
+de:
+  activerecord:
+    models:
+      registration: 'Anmeldung'
+      registration_entry: 'Anmeldungseintrag'
+    attributes:
+      registration_entry:
+        name: 'Name'
+        food_selection: 'Essen'
+        comment: 'Kommentar'
+        all_days: 'Freitag beim BBQ?'

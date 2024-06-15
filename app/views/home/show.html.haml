@@ -7,6 +7,7 @@
         .byline
           heiraten
       = image_tag('flower_overlay.png')
+
   #wave
     = image_tag('wave-in.svg')
 
@@ -17,137 +18,46 @@
         .h1
           7. Juni 2025
         .h3
-          Albani Kirche & Hotel Freigeist
+          Albani Kirche & Hotel Freigeist Innenstadt
         .h3  
           Göttingen
       .row.align-items-center.py-5
         .col-md-3
           .h1
-            Noch 5 Tage
+            Noch
+            = (@start_date - Time.now.to_date).to_i
+            Tage
           
-          %button.btn.btn-dark.btn-lg.my-2
-            Anmeldung
-          = button_to 'Hotel', 'https://www.freigeist-hotels.de/de/freigeist-hotels/freigeist-goettingen-innenstadt/', class: 'btn btn-dark btn-lg my-2', target: '_blank'
+          = button_to 'Anmeldung', root_path(anchor: :rsvp), class: 'btn btn-dark btn-lg my-2', method: :get, data: { turbo: false }
+          = button_to 'Hotel buchen', 'https://www.freigeist-hotels.de/de/freigeist-hotels/freigeist-goettingen-innenstadt/', class: 'btn btn-dark btn-lg my-2', target: '_blank'
         .col-md
           .card
             .card-body
-              .h1
+              .h2
                 Liebe Freunde und Familie,
               %p
                 wir freuen uns unglaublich, diesen besonderen Moment mit euch zu teilen. Am 7.6.2025 möchten wir unseren großen Tag feiern und es wäre uns eine Ehre, wenn ihr dabei seid.
-                %br
+              %p
                 Um die Planung für uns ein wenig einfacher zu gestalten, bitten wir euch, euch hier auf unserer Website für die Hochzeit anzumelden (RSVP). Hier findet ihr alle wichtigen Informationen zu unserer Feier, einschließlich Ort, Zeitplan und Unterkunftsmöglichkeiten.
-                %br
+              %p
                 Eure Anwesenheit bedeutet uns sehr viel und wir können es kaum erwarten, diesen besonderen Tag gemeinsam mit euch zu verbringen.
-                %br
+              %p
                 Herzlichst,
-              .h1
+              .h2
                 Josepha & Felix
             
   #wave
     = image_tag('wave-out.svg')
   
-#time-line.container.py-3
-  .text-center
-    .h1
-      Programm
-    .h3.my-5
-      Feitag
-  .row.align-items-center.py-3
-    .col.text-center
-      .h3
-        ab 17 Uhr
-      = image_tag('travel')
-    .col
-      .card.border-primary
-        .card-body
-          .h5.card-title
-            Anreise
-          .h6.card-subtitle.mb-2.text-body-secondary
-            Benfeyweg 3, 37075 Göttingen
-          Lasst uns das Hochzeitswochenende ganz entspannt einläuten! Wer mag, ist am Freitagabend herzlich zu einem lockeren Get Together bei Sabine und Andreas eingeladen. Es wird ein leckeres BBQ im Garten geben, wo ihr euch flexibel nach eurer Anreise dazu gesellen könnt. Kommt vorbei und genießt den Start ins Wochenende mit uns!
-  .text-center.my-5
-    .h3
-      Samstag
-  .row.align-items-center.py-3
-    .col
-      .card.border-primary
-        .card-body
-          .h5.card-title
-            Kirche
-          .h6.card-subtitle.mb-2.text-body-secondary
-            Albani Kirche, Albanikirchhof 1A, 37073 Göttingen
-          Wir freuen uns riesig, euch zur Trauung in der wunderschönen Albani Kirche begrüßen zu dürfen. Hier geben wir uns das Ja-Wort und würden diesen besonderen Moment gerne mit euch teilen.
-    .col.text-center
-      .h3
-        11 Uhr
-      = image_tag('church')
+= render partial: 'travel_and_hotel'
+= render partial: 'timeline'
+= render partial: 'gifts'
+= render partial: 'rsvp'
 
-  .row.align-items-center.py-3
-    .col.text-center
-      .h3
-        13 Uhr
-      = image_tag('cake')
-    .col
-      .card.border-primary
-        .card-body
-          .h5.card-title
-            Bubbles & Cake
-          .h6.card-subtitle.mb-2.text-body-secondary
-            Hotel Freigeist Innenstadt, Berliner Str. 30, 37073 Göttingen
-          Auf eine erfolgreiche Trauung muss angestoßen werden. Im Hotel gibt es Sekt und Kuchen, und wenn das Wetter mitspielt, feiern wir bei schöner Aussicht auf der Dachterrasse. Hier ist ein guter Moment für gemeinsame Bilder. 📸
-  .row.align-items-center.py-3
-    .col
-      .card.border-primary
-        .card-body
-          .h5.card-title
-            Einmal durchatmen!
-          .h6.card-subtitle.mb-2.text-body-secondary
-            = '-'
-          Nutzt die Pause und sammelt neue Energie für die Feierlichkeiten am Abend. Hotelgästen steht der gesamte Wellnessbereich zur Verfügung 😉 Wer motiviert ist, kann in der Zeit die schöne Göttinger Altsadt erkunden.
-    .col.text-center
-      .h3
-        14 Uhr
-      = image_tag('refresh')
-  .row.align-items-center.py-3
-    .col.text-center
-      .h3
-        19 Uhr
-      = image_tag('food')
-    .col
-      .card.border-primary
-        .card-body
-          .h5.card-title
-            Festliches Abendessen
-          .h6.card-subtitle.mb-2.text-body-secondary
-            Hotel Freigeist Innenstadt, Berliner Str. 30, 37073 Göttingen
-          Am Abend erwartet euch ein festliches Dinner im Hotel. Die Köche des Intuu Restaurants werden uns ein spannendes Menü zaubern aus den Landesküchen von Japan und Südamerika.
-  .row.align-items-center.py-3
-    .col
-      .card.border-primary
-        .card-body
-          .h5.card-title
-            Party
-          .h6.card-subtitle.mb-2.text-body-secondary
-            Hotel Freigeist Innenstadt, Berliner Str. 30, 37073 Göttingen
-          Jetzt wird gefeiert! Nach dem Abendessen geht die Party los und wir tanzen, lachen und feiern bis die Füße schmerzen. Die Hotelparty endet offiziell um 4 Uhr, aber wer noch nicht genug hat, kann mit uns im Savoy weiterfeiern. Let's fetz!
-    .col.text-center
-      .h3
-        22 Uhr
-      = image_tag('party')
-  .text-center.my-5
-    .h3
-      Sonntag
-  .row.align-items-center.py-3
-    .col.text-center
-      .h3
-        ab 9 Uhr
-      = image_tag('cake')
-    .col
-      .card.border-primary
-        .card-body
-          .h5.card-title
-            Gemeinsames Frühstück
-          .h6.card-subtitle.mb-2.text-body-secondary
-            Hotel Freigeist Innenstadt, Berliner Str. 30, 37073 Göttingen
-          Lasst uns zusammen in den neuen Tag starten. Nach einer langen Nacht lassen wir das Wochenende gemütlich ausklingen. Am Sonntagmorgen laden wir euch zu einem gemeinsamen Frühstück im Hotel ein, bevor wir uns wieder auf den Heimweg machen.
+.row.align-items-center.py-4
+  .col
+    %hr.border.border-primary
+  .col-1
+    = image_tag('icon', class: 'w-100')
+  .col-1
+    %hr.border.border-primary

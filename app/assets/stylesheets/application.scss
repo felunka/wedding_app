@@ -1,4 +1,4 @@
-.h1 {
+.h1,.h2 {
   font-family: 'Modern No 20';
 }
 
@@ -9,6 +9,10 @@ $primary: #174e9d;
 @font-face {
   font-family: 'Modern No 20';
   src: url('MOD20.TTF');
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -104,4 +108,5 @@ body {
   z-index: 20;
 }
 
-
+@import "timeline.scss";
+@import "cards.scss";
