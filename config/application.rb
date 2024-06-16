@@ -28,5 +28,6 @@ module WeddingApp
 
     config.assets.paths << Rails.root.join('app/assets/images/hotel')
     config.assets.paths << Rails.root.join('app/assets/images/travel')
+    config.assets.paths << Rails.root.join('app/assets/images/contact')
   end
 end
