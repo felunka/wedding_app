@@ -13,4 +13,9 @@
     = stylesheet_link_tag 'application', 'data-turbo-track': 'reload'
     = javascript_importmap_tags
   %body.bg-white
+    .container-fluid{id: :flashbox }
+      - flash.each do |key, value|
+        .alert.alert-dismissible.mt-3{class: "alert-#{key}", role: 'alert'}
+          = value
+          %button.btn-close.close{data: {bs: {dismiss: 'alert'}}, aria: {label: 'Close'}, type: 'button'}
     = yield

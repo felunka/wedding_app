@@ -7,3 +7,5 @@ de:
       created: 'Erfolgreich angelegt'
       updated: 'Erfolgreich aktualisiert'
       deleted: 'Eintrag wurde gelöscht'
+    registration:
+      created: 'Vielen Dank für deine Anmeldung!'
