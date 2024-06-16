@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   root 'home#show'
 
+  get 'admin' => 'registrations#index'
+
   resource :session, only: %i[new create destroy]
   resources :registrations, only: %i[create index]
 end

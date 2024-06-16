@@ -1,7 +1,13 @@
 class SessionsController < ApplicationController
   skip_before_action :require_login, only: %i[new create]
 
-  def new; end
+  def new
+    return unless params[:admin_key] == Rails.application.credentials.config[:admin_key]
+
+    session[:auth] = true
+    session[:admin] = true
+    redirect_to registrations_path
+  end
 
   def create
     respond_to do |format|

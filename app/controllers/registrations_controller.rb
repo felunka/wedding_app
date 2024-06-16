@@ -1,4 +1,8 @@
 class RegistrationsController < ApplicationController
+  def index
+    @registration = Registration.all
+  end
+
   def create
     @registration = Registration.new permit(params)
 
