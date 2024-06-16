@@ -1,0 +1,9 @@
+de:
+  messages:
+    login:
+      success: 'Login erfolgreich'
+      fail: 'Login fehlgeschlagen'
+    model:
+      created: 'Erfolgreich angelegt'
+      updated: 'Erfolgreich aktualisiert'
+      deleted: 'Eintrag wurde gelöscht'

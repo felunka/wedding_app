@@ -1,0 +1,17 @@
+#head-wrapper
+  #hero-head
+    .image-stack
+      #blue-box.border.border-primary.border-2
+        .h1
+          Josepha & Felix
+        .byline
+          heiraten
+        #login
+          .h5
+            Bitte gib das Datum der Trauung als Passwort ein:
+          = simple_form_for :login, url: session_path, wrapper: :input_group do |f|
+            = f.input :start_date, label: false do
+              .input-group
+                = f.input_field :start_time_date, as: :date, html5: true, class: "form-control"
+                = f.submit 'Login', class: 'btn btn-outline-primary'
+      = image_tag('flower_overlay.png')
