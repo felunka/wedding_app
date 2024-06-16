@@ -2,7 +2,7 @@
   --stacked-cards: 4;
   --stacked-cardHeight: 60vh;
   --stacked-cardTopPadding: 1.5rem;
-  --stacked-baseTopPadding: 15vh;
+  --stacked-baseTopPadding: 0px;
   --stacked-cardMargin: 4vw;
 }
 
@@ -20,7 +20,7 @@
   grid-template-rows: repeat(var(--stacked-cards), var(--stacked-cardHeight));
   gap: var(--stacked-cardMargin);
   padding-bottom: calc(var(--stacked-cards) * var(--stacked-cardTopPadding));
-  margin-bottom: calc(var(--stacked-cards) * var(--stacked-cardMargin));
+  margin-bottom: 0px;
 }
 
 #stacked-card1 {
@@ -42,8 +42,12 @@
   padding-top: calc(var(--index) * var(--stacked-cardTopPadding) + var(--stacked-baseTopPadding));
 }
 
-#stacked-card1 .stacked-card-body {
+#stacked-card1 .stacked-card-body .col {
   background-image: image-url('travel/travel-1.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 0px 50px 50px 0px;
 }
 #stacked-card2 .stacked-card-body {
   background-image: image-url('travel/travel-2.jpg');
@@ -57,13 +61,9 @@
 
 .stacked-card-body {
   box-sizing: border-box;
-  padding: 30px;
   border-radius: 50px;
   box-shadow: 0 0 30px 0 rgba(0,0,0,0.3);
   height: var(--stacked-cardHeight);
-  display: flex;
-  justify-content: center;
-  align-items: center;
   transition: all 0.5s;
   background-position: center;
   background-repeat: no-repeat;

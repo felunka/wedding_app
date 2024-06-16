@@ -14,7 +14,7 @@
 #content
   .bg-primary
     .container.py-3
-      .text-center.py-5
+      .text-center.py-md-5
         .h1
           7. Juni 2025
         .h3
@@ -22,7 +22,7 @@
         .h3  
           Göttingen
       .row.align-items-center.py-5
-        .col-md-3
+        .col-md-3.d-flex.flex-column.align-items-center
           .h1
             Noch
             = (@start_date - Time.now.to_date).to_i
@@ -58,7 +58,7 @@
   .row.align-items-center
     .col
       %hr.border.border-primary
-    .col-1
+    .col-lg-1.col-3
       = image_tag('icon.png', class: 'w-100')
     .col-1
       %hr.border.border-primary
