@@ -54,10 +54,11 @@
 = render partial: 'gifts'
 = render partial: 'rsvp'
 
-.row.align-items-center.py-4
-  .col
-    %hr.border.border-primary
-  .col-1
-    = image_tag('icon.png', class: 'w-100')
-  .col-1
-    %hr.border.border-primary
+.container.py-3
+  .row.align-items-center
+    .col
+      %hr.border.border-primary
+    .col-1
+      = image_tag('icon.png', class: 'w-100')
+    .col-1
+      %hr.border.border-primary
