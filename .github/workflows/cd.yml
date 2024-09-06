@@ -24,4 +24,4 @@ jobs:
           RAILS_MASTER_KEY=${{ secrets.RAILS_MASTER_KEY }}
           POSTGRES_PASSWORD=${{ secrets.POSTGRES_PASSWORD }}
           POSTGRES_HOSTNAME=yzYTXR
-          /usr/local/bin/docker-compose --file docker-compose.yml --project-name wedding_app up --detach --remove-orphans --build
+          docker compose --file docker-compose.yml --project-name wedding_app up --detach --remove-orphans --build
