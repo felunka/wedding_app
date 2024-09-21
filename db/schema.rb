@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_06_15_204202) do
+ActiveRecord::Schema[7.1].define(version: 2024_09_21_082521) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -28,6 +28,14 @@ ActiveRecord::Schema[7.1].define(version: 2024_06_15_204202) do
   create_table "registrations", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "hotel_email"
+    t.date "hotel_start_date", default: "2025-06-08"
+    t.date "hotel_end_date", default: "2025-06-08"
+    t.integer "hotel_number_double_rooms", default: 0
+    t.integer "hotel_number_single_rooms", default: 0
+    t.integer "hotel_number_of_adults", default: 0
+    t.integer "hotel_number_of_children", default: 0
+    t.string "hotel_comments"
   end
 
   add_foreign_key "registration_entries", "registrations"

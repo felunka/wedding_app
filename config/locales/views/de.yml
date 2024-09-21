@@ -9,3 +9,4 @@ de:
       deleted: 'Eintrag wurde gelöscht'
     registration:
       created: 'Vielen Dank für deine Anmeldung!'
+      created_with_hotel: 'Vielen Dank für deine Anmeldung! Die Informationen wurden an das Hotel weitergeleitet. Das Hotel meldet sich mit einer Bestätigung. Das kann bis zu 72h dauern.'

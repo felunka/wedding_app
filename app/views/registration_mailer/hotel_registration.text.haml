@@ -1,0 +1,19 @@
+Guten Tag,
+
+Bitte reservieren sie aus dem Abrufkontingent 'Josepha&Felix' mit folgenden Informationen:
+
+Informationen:
+= "Name: #{@registration.registration_entries.first.name}"
+= "Doppelzimmer: #{@registration.hotel_number_double_rooms}"
+= "Einzelzimmer: #{@registration.hotel_number_single_rooms}"
+= "Erwachsene: #{@registration.hotel_number_of_adults}"
+= "Kinder: #{@registration.hotel_number_of_children}"
+= "Anreise: #{@registration.hotel_start_date.strftime('%d.%m.%Y')}"
+= "Abreise: #{@registration.hotel_end_date.strftime('%d.%m.%Y')}"
+= "Kommentar: #{@registration.hotel_comments}"
+
+Bitte senden sie eine Bestätigung der Buchung per Email an:
+= @registration.hotel_email
+
+Vielen Dank!
+Felix von Tiedemann

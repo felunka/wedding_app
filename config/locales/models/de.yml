@@ -4,6 +4,15 @@ de:
       registration: 'Anmeldung'
       registration_entry: 'Anmeldungseintrag'
     attributes:
+      registration:
+        hotel_email: 'E-Mail'
+        hotel_start_date: 'Anreise'
+        hotel_end_date: 'Abreise'
+        hotel_number_double_rooms: 'Anzahl Doppelzimmer'
+        hotel_number_single_rooms: 'Anzahl Einzelzimmer'
+        hotel_number_of_adults: 'Erwachsene'
+        hotel_number_of_children: 'Kinder'
+        hotel_comments: 'Kommentar fürs Hotel'
       registration_entry:
         name: 'Name'
         food_selection: 'Essen'
