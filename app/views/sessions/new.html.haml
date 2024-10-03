@@ -8,10 +8,11 @@
           heiraten
       = image_tag('flower_overlay.webp')
     #login
-      .h5
-        Bitte gib das Datum der Trauung als Passwort ein:
-      = simple_form_for :login, url: session_path, wrapper: :input_group do |f|
-        = f.input :start_date, label: false do
-          .input-group
-            = f.input_field :start_time_date, as: :date, html5: true, class: "form-control"
-            = f.submit 'Login', class: 'btn btn-outline-primary'
+      .container
+        .h5
+          Bitte gib das Datum der Trauung als Passwort ein:
+        = simple_form_for :login, url: session_path, wrapper: :input_group do |f|
+          = f.input :start_date, label: false do
+            .input-group
+              = f.input_field :start_time_date, as: :date, html5: true, class: "form-control"
+              = f.submit 'Login', class: 'btn btn-outline-primary'
