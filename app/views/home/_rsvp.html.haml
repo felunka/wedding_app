@@ -29,14 +29,13 @@
           = f.input :hotel_email
           .row
             .col-md
-              = f.input :hotel_number_double_rooms
-              = f.input :hotel_number_single_rooms
-            .col-md
-              = f.input :hotel_number_of_adults
-              = f.input :hotel_number_of_children
-            .col-md
               = f.input :hotel_start_date, html5: true
+            .col-md
               = f.input :hotel_end_date, html5: true
+            .col-md
+              = f.input :hotel_number_double_rooms, collection: 0..10
+            .col-md
+              = f.input :hotel_number_single_rooms, collection: 0..10
           = f.input :hotel_comments, placeholder: 'z.B. Beistellbetten für Kinder'
 
           = f.submit 'Absenden', class: 'btn btn-primary mt-2'

@@ -9,9 +9,7 @@ Guten Tag,
     %li
       = "Einzelzimmer: #{@registration.hotel_number_single_rooms}"
     %li
-      = "Erwachsene: #{@registration.hotel_number_of_adults}"
-    %li
-      = "Kinder: #{@registration.hotel_number_of_children}"
+      = "Anzahl Gäste: #{@registration.registration_entries.count}"
     %li
       = "Anreise: #{@registration.hotel_start_date.strftime('%d.%m.%Y')}"
     %li
