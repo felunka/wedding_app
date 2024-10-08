@@ -17,15 +17,13 @@
             Stunden eine Bestätigung vom Hotel per Email. Änderungen sind dann nur noch telefonisch
             direkt mit dem Hotel möglich.
           %p
-            Kosten:
+            Kosten (inkl. Mehrwertsteuer):
             %br
-            154€/Nacht im Einzelzimmer. 179€/Nacht im Doppelzimmer. Inklusive Frühstück, WLAN und Wellness. Inklusive Mehrwertsteuer.
+            154€/Nacht im Einzelzimmer. 179€/Nacht im Doppelzimmer. Inklusive Frühstück, WLAN und Wellness.
           %p
             Stornobedingungen:
             %br
-            Die Reservierung kann bis 42 Tage vor der Anreise kostenfrei storniert werden. Spätere
-            Stornierungen und Änderungen werden mit 90% des Gesamtbetrages in Rechnung gestellt. Bei
-            Nicht-Anreisen werden 95% des Gesamtbetrages berechnet.
+            Die Reservierung kann bis 3 Tage vor Anreise kostenfrei storniert werden.
           = f.input :hotel_email
           .row
             .col-md
@@ -33,9 +31,9 @@
             .col-md
               = f.input :hotel_end_date, html5: true
             .col-md
-              = f.input :hotel_number_double_rooms, collection: 0..10
+              = f.input :hotel_number_double_rooms, collection: 0..10, include_blank: false, include_hidden: false
             .col-md
-              = f.input :hotel_number_single_rooms, collection: 0..10
+              = f.input :hotel_number_single_rooms, collection: 0..10, include_blank: false, include_hidden: false
           = f.input :hotel_comments, placeholder: 'z.B. Beistellbetten für Kinder'
 
           = f.submit 'Absenden', class: 'btn btn-primary mt-2'
