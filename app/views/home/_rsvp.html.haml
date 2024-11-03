@@ -5,11 +5,11 @@
     .card.border-primary.h-100
       .card-body
         = simple_form_for @registration do |f|
-          .d-flex.flex-column.gap-3.my-3
-            #registration_entries{data: { controller: 'cocoon room-visualisation' }}
-              = f.fields_for :registration_entries do |entry|
-                = render 'registration_entry_fields', f: entry
+          #registration_entries{data: { controller: 'cocoon' }}
+            = f.fields_for :registration_entries do |entry|
+              = render 'registration_entry_fields', f: entry
           
+          .d-flex.flex-column.gap-3
             = link_to_add_association f, :registration_entries, class: 'btn btn-primary' do
               = '+ Person hinzufügen'
             #hotel-rsvp-button.btn.btn-primary{ data: { bs: { toggle: "collapse", target: "#hotel-rsvp-fields" }}}
