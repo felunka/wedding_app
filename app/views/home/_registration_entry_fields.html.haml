@@ -1,5 +1,12 @@
 .nested-fields
-  = f.input :name
-  = f.input :food_selection, collection: RegistrationEntry.food_selections.symbolize_keys.keys, include_blank: false, include_hidden: false
-  = f.input :comment, placeholder: 'z.B. Allergien'
-  = f.input :all_days
+  .card
+    .card-body
+      = link_to_remove_association f, class: 'btn-close float-end', data: { action: 'click->cocoon#removeRow' } do
+        = ""
+      = f.input :name
+      .row
+        .col
+          = f.input :food_selection, collection: RegistrationEntry.food_selections.symbolize_keys.keys, include_blank: false, include_hidden: false
+        .col
+          = f.input :comment, placeholder: 'z.B. Allergien'
+        = f.input :all_days

@@ -5,35 +5,39 @@
     .card.border-primary.h-100
       .card-body
         = simple_form_for @registration do |f|
-          = f.fields_for :registration_entries do |entry|
-            = render 'registration_entry_fields', f: entry
-          .links.my-3
-            = link_to_add_association f, :registration_entries, class: 'btn btn-primary' do
-              = '+ Person Hinzufügen'
+          .d-flex.flex-column.gap-3.my-3
+            #registration_entries{data: { controller: 'cocoon room-visualisation' }}
+              = f.fields_for :registration_entries do |entry|
+                = render 'registration_entry_fields', f: entry
           
-          %p
-            Im Hotel haben wir bereits Zimmer für euch reserviert. Falls ihr ein Hotelzimmer direkt
-            buchen wollt, füllt einfach die Hotelinformationen aus. Ihr erhaltet dann nach ein paar
-            Stunden eine Bestätigung vom Hotel per Email. Änderungen sind dann nur noch telefonisch
-            direkt mit dem Hotel möglich.
-          %p
-            Kosten (inkl. Mehrwertsteuer):
-            %br
-            154€/Nacht im Einzelzimmer. 179€/Nacht im Doppelzimmer. Inklusive Frühstück, WLAN und Wellness.
-          %p
-            Stornobedingungen:
-            %br
-            Die Reservierung kann bis 3 Tage vor Anreise kostenfrei storniert werden.
-          = f.input :hotel_email
-          .row
-            .col-md
-              = f.input :hotel_start_date, html5: true
-            .col-md
-              = f.input :hotel_end_date, html5: true
-            .col-md
-              = f.input :hotel_number_double_rooms, collection: 0..10, include_blank: false, include_hidden: false
-            .col-md
-              = f.input :hotel_number_single_rooms, collection: 0..10, include_blank: false, include_hidden: false
-          = f.input :hotel_comments, placeholder: 'z.B. Beistellbetten für Kinder'
+            = link_to_add_association f, :registration_entries, class: 'btn btn-primary' do
+              = '+ Person hinzufügen'
+            #hotel-rsvp-button.btn.btn-primary{ data: { bs: { toggle: "collapse", target: "#hotel-rsvp-fields" }}}
+              = '+ Hotel hinzufügen'
+          #hotel-rsvp-fields.collapse
+            %p
+              Im Hotel haben wir bereits Zimmer für euch reserviert. Falls ihr ein Hotelzimmer
+              buchen wollt, füllt einfach die Hotelinformationen aus. Ihr erhaltet dann nach ein paar
+              Tagen eine Bestätigung vom Hotel per Email. Änderungen sind dann nur noch telefonisch
+              direkt mit dem Hotel möglich.
+            %p
+              Kosten (inkl. Mehrwertsteuer):
+              %br
+              154€/Nacht im Einzelzimmer. 179€/Nacht im Doppelzimmer. Inklusive Frühstück, WLAN und Wellness.
+            %p
+              Stornobedingungen:
+              %br
+              Die Reservierung kann bis 3 Tage vor Anreise kostenfrei storniert werden.
+            = f.input :hotel_email
+            .row
+              .col-md
+                = f.input :hotel_start_date, html5: true
+              .col-md
+                = f.input :hotel_end_date, html5: true
+              .col-md
+                = f.input :hotel_number_double_rooms, collection: 0..5, include_blank: false, include_hidden: false
+              .col-md
+                = f.input :hotel_number_single_rooms, collection: 0..5, include_blank: false, include_hidden: false
+            = f.input :hotel_comments, placeholder: 'z.B. Beistellbetten für Kinder'
 
-          = f.submit 'Absenden', class: 'btn btn-primary mt-2'
+          = f.submit 'Absenden', class: 'btn btn-success mt-2 float-end'
