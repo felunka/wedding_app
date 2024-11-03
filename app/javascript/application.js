@@ -4,7 +4,7 @@ import "controllers"
 import "@popperjs/core"
 import "bootstrap"
 import "cocoon-js-vanilla"
-import BootstrapTooltips from "./components/bootstrap_tooltips"
+import BootstrapTooltips from "components/bootstrap_tooltips"
 
 // Fix popperjs
 window.process = {};

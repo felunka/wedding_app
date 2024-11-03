@@ -11,3 +11,4 @@ pin '@popperjs/core', to: 'https://ga.jspm.io/npm:@popperjs/core@2.11.2/lib/inde
 pin '@nathanvda/cocoon', to: 'https://ga.jspm.io/npm:@nathanvda/cocoon@1.2.14/cocoon.js'
 pin 'cocoon-js-vanilla' # @1.5.1
 pin_all_from 'app/javascript/controllers', under: 'controllers'
+pin_all_from 'app/javascript/components', under: 'components'
