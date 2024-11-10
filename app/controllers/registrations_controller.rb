@@ -1,6 +1,6 @@
 class RegistrationsController < ApplicationController
   def index
-    @registration = Registration.all
+    @registrations = Registration.all
   end
 
   def create

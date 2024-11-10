@@ -10,8 +10,10 @@
       %th
         Kommentar
       %th
+        Hotel?
+      %th
         BBQ?
-    - @registration.each do |registration|
+    - @registrations.each do |registration|
       - registration.registration_entries.each do |entry|
         %tr
           %td
@@ -22,5 +24,7 @@
             = entry.food_selection
           %td
             = entry.comment
+          %td
+            = registration.is_with_hotel_booking
           %td
             = entry.all_days
