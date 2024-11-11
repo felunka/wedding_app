@@ -9,7 +9,8 @@ class RegistrationsController < ApplicationController
     respond_to do |format|
       if @registration.save
         if @registration.is_with_hotel_booking
-          RegistrationMailer.with(registration: @registration).hotel_registration.deliver_later
+          # TODO: enable once booking is possible again
+          # RegistrationMailer.with(registration: @registration).hotel_registration.deliver_later
           flash[:success] = t('messages.registration.created_with_hotel')
         else
           flash[:success] = t('messages.registration.created')
