@@ -30,7 +30,7 @@ body {
     position: relative;
     height: 85%;
     font-family: 'Modern No 20';
-    color: #174e9d;
+    color: $primary;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -143,7 +143,7 @@ body {
 
   #wave {
     overflow: hidden;
-    img {
+    svg {
       width: 130%;
       margin-left: -10%;
     }
@@ -159,6 +159,33 @@ body {
   width: 100%;
   top: -15%;
   z-index: 20;
+}
+
+.text-decoration-line {
+	overflow: hidden;
+	text-align: center;
+	&::before {
+		background-color: $white;
+		content: "";
+		display: inline-block;
+		height: 1px;
+		position: relative;
+		vertical-align: middle;
+		width: 50%;
+		right: 0.5em;
+		margin-left: -50%;
+	}
+	&::after {
+		background-color: $white;
+		content: "";
+		display: inline-block;
+		height: 1px;
+		position: relative;
+		vertical-align: middle;
+		width: 50%;
+		left: 0.5em;
+		margin-right: -50%;
+	}
 }
 
 @import "timeline.scss";
