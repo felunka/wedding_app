@@ -3,7 +3,7 @@ class RegistrationEntry < ApplicationRecord
 
   enum food_selection: {
     carnivores: 0,
-    vegeratian: 1,
+    vegetarian: 1,
     vegan: 2
   }
 end
