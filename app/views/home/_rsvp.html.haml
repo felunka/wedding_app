@@ -4,42 +4,8 @@
       Anmeldung
     .card.border-primary.h-100
       .card-body
-        = simple_form_for @registration do |f|
-          #registration_entries{data: { controller: 'cocoon' }}
-            = f.fields_for :registration_entries do |entry|
-              = render 'registration_entry_fields', f: entry
-          
-          .d-flex.flex-column.gap-3
-            = link_to_add_association f, :registration_entries, class: 'btn btn-primary' do
-              = '+ Person hinzufügen'
-            #hotel-rsvp-button.btn.btn-primary{ data: { bs: { toggle: "collapse", target: "#hotel-rsvp-fields" }}}
-              = '+ Hotel hinzufügen'
-          #hotel-rsvp-fields.collapse
-            %p
-              Im Hotel haben wir bereits Zimmer für euch reserviert. Falls ihr ein Hotelzimmer
-              buchen wollt, füllt einfach die Hotelinformationen aus. Ihr erhaltet dann nach ein paar
-              Tagen eine Bestätigung vom Hotel per Email. Änderungen sind dann nur noch telefonisch
-              direkt mit dem Hotel möglich.
-            %p
-              Kosten (inkl. Mehrwertsteuer):
-              %br
-              154€/Nacht im Einzelzimmer. 179€/Nacht für 2 Personen im Doppelzimmer. Inklusive Frühstück, WLAN und Wellness.
-              %br
-              Die Hotelübernachtung ist leider nicht günstig. Bitte fühlt euch nicht verpflichtet, uns zusätzlich etwas zu schenken.
-            %p
-              Stornobedingungen:
-              %br
-              Die Reservierung kann bis 42 Tage vor Anreise kostenfrei storniert werden.
-            = f.input :hotel_email
-            .row
-              .col-md
-                = f.input :hotel_start_date, html5: true
-              .col-md
-                = f.input :hotel_end_date, html5: true
-              .col-md
-                = f.input :hotel_number_double_rooms, collection: 0..5, include_blank: false, include_hidden: false
-              .col-md
-                = f.input :hotel_number_single_rooms, collection: 0..5, include_blank: false, include_hidden: false
-            = f.input :hotel_comments, placeholder: 'z.B. Beistellbetten für Kinder'
+        %p
+          Vielen dank für eure Anmeldung! Falls noch fragen mit dem Hotel offen sind, wendet euch gerne direkt an
+          die Rezeption.
 
-          = f.submit 'Absenden', class: 'btn btn-success mt-2 float-end'
+        = link_to 'Hotel anrufen', 'tel:004955130381799', class: 'btn btn-dark btn-lg my-2', target: '_blank'
