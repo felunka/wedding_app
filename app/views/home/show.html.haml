@@ -19,10 +19,6 @@
       .text-center.py-md-5
         .h1
           7. Juni 2025
-        .h5.text-decoration-line
-          Noch
-          = (@start_date - Time.now.to_date).to_i
-          Tage
         .h3
           Albani Kirche & Hotel Freigeist Innenstadt
         .h3  
@@ -33,26 +29,24 @@
             .h3
               Liebe Freunde und Familie,
             %p
-              wir freuen uns unglaublich, diesen besonderen Moment mit euch teilen zu dürfen. Am 7.6.2025 möchten wir unseren großen Tag feiern und es wäre uns eine Ehre, wenn ihr dabei seid.
+              vielen Dank, dass ihr uns an diesen außergewöhnlichen Tag begleitet habt! Wir hoffen ihr hattet genau so viel Spaß wir wir daran, auch wenn das Fest viel zu schnell vorbei gerauscht ist.
             %p
-              Um die Planung für uns ein wenig einfacher zu gestalten, bitten wir euch, euch hier auf unserer Website für die Hochzeit anzumelden (RSVP). Hier findet ihr außerdem alle wichtigen Informationen zu unserer Feier, einschließlich Ort, Zeitplan und Unterkunftsmöglichkeiten.
+              Unten findet ihr nun eine Auswahl der Bilder. Falls ihr ein Bild vermisst oder eine Version in besserer Auflösung benötigt, meldet euch gerne bei uns.
             %p
-              Eure Anwesenheit bedeutet uns sehr viel und wir können es kaum erwarten, diesen besonderen Tag gemeinsam mit euch zu verbringen.
+              Wir freuen uns, euch alle ganz bald wieder zu sehen!
             %p
               Herzlichst,
             .h3
               Josepha & Felix
-            
+
   #wave
     %svg.bg-white-svg{viewbox: "0 0 2560 168.6227", xmlns: "http://www.w3.org/2000/svg"}
       %g{transform: "scale(-1, -1) translate(-2560, -168.6227)"}
         %path{d: "M2560,0c0,0-219.6543,165.951-730.788,124.0771c-383.3156-31.4028-827.2138-96.9514-1244.7139-96.9514c-212.5106,0-439,3.5-584.4982,1.5844l0,139.9126h2560V0z", fill: "#174e9d"}
   
-= render partial: 'travel_and_hotel'
+= render partial: 'pictures'
 = render partial: 'timeline'
 = render partial: 'gifts'
-= render partial: 'rsvp'
-= render partial: 'contact'
 
 .container.py-3
   .row.align-items-center

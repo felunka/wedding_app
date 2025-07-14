@@ -1,0 +1,16 @@
+.container
+  = link_to "Upload new", new_picture_path
+  %table.table
+    - @pictures.each do |pic|
+      %tr
+        %td
+          = pic.sort_index
+        %td
+          = image_tag pic.data.variant(:thumb)
+        %td
+          = pic.picture_type
+        %td
+          = pic.slot_size
+        %td
+          = button_to "delete", pic, method: :delete
+          = button_to "edit", edit_picture_path(pic), method: :get

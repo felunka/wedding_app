@@ -1,0 +1,7 @@
+= simple_form_for @picture do |f|
+  = f.input :sort_index
+  = f.input :picture_type, collection: Picture.picture_types.symbolize_keys.keys, include_blank: false, include_hidden: false
+  = f.input :slot_size
+  = f.input :data, as: :file, input_html: { data: { direct_upload_url: '/rails/active_storage/direct_uploads' }, multiple: true }
+
+  = f.submit class: 'btn btn-primary mt-2'

@@ -33,6 +33,8 @@ Rails.application.configure do
     config.cache_store = :null_store
   end
 
+  Rails.application.routes.default_url_options[:host] = 'localhost:3000'
+
   # Store uploaded files on the local file system (see config/storage.yml for options).
   config.active_storage.service = :local
 
@@ -86,4 +88,6 @@ Rails.application.configure do
     open_timeout: 5,
     read_timeout: 5
   }
+
+  Rack::Utils.multipart_part_limit = 256
 end

@@ -12,4 +12,5 @@ Rails.application.routes.draw do
 
   resource :session, only: %i[new create destroy]
   resources :registrations, only: %i[create index]
+  resources :pictures
 end

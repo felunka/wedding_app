@@ -13,8 +13,4 @@ window.process.env.NODE_ENV = "production";
 
 document.addEventListener("turbo:load", function() {
   BootstrapTooltips.setup();
-  const rsvpButton = document.getElementById("hotel-rsvp-button")
-  rsvpButton.addEventListener("click", (_) => {
-    rsvpButton.classList.add("d-none")
-  });
 });

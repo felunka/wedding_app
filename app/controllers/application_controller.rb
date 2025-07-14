@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+  before_action :set_active_storage_url_options
   before_action :require_login
 
   NotAuthorized = Class.new(StandardError)
@@ -7,6 +8,12 @@ class ApplicationController < ActionController::Base
     return if session[:auth]
 
     redirect_to new_session_path
+  end
+
+  private
+
+  def set_active_storage_url_options
+    ActiveStorage::Current.url_options = Rails.application.routes.default_url_options
   end
 
   rescue_from ApplicationController::NotAuthorized do |_|
