@@ -10,6 +10,8 @@ services:
   web:
     build: .
     command: bash -c "rails db:migrate && rails s -p 3000 -b '0.0.0.0'"
+    volumes:
+      - active-storage:/app/storage
     networks:
       - reverse_proxy
       - default
@@ -30,6 +32,7 @@ services:
       - traefik.http.routers.${ROUTER_NAME:-wedding_app}.tls.certresolver=letsencrypt
 volumes:
   db-data:
+  active-storage:
 networks:
   reverse_proxy:
     name: reverse_proxy
