@@ -16,7 +16,7 @@
           .col-md-6{class: "col-xl-#{row_slots} col-lg-#{row_slots}"}
             .feed-picture{data: { action: 'click->gallery#pictureClick' }, class: "slot-#{pic.slot_size}"}
               - variant_type = pic.slot_size > 1 ? :feed_lg : :feed_sm
-              = image_tag pic.data.variant(variant_type).processed.url, data: {picture_id: pic.id}
+              = image_tag pic.data.variant(variant_type).processed.url, data: {picture_id: pic.id}, loading: 'lazy'
     #photoboxTab.tab-pane.fade.show{:role => "tabpanel", :tabindex => "0"}
       .picture-feed.row.g-0{data: { controller: 'gallery', gallery_modal_value: 'galleryModalPhotobox', gallery_carousel_value: 'galleryCarouselPhotobox' }}
         - @pictures.where(picture_type: 'photobox').each do |pic|
@@ -24,7 +24,7 @@
           .col-md-6{class: "col-xl-#{row_slots} col-lg-#{row_slots}"}
             .feed-picture{data: { action: 'click->gallery#pictureClick' }, class: "slot-#{pic.slot_size}"}
               - variant_type = pic.slot_size > 1 ? :feed_lg : :feed_sm
-              = image_tag pic.data.variant(variant_type).processed.url, data: {picture_id: pic.id}
+              = image_tag pic.data.variant(variant_type).processed.url, data: {picture_id: pic.id}, loading: 'lazy'
 
 #galleryModalPhotographer.modal.fade{tabindex: "-1"}
   .modal-dialog.modal-dialog-centered.modal-xl
