@@ -2,7 +2,8 @@
 FROM ruby:3.2
 
 # Install node and yarn
-RUN apt-get update -qq && apt-get install -y nodejs npm yarn postgresql-client libvips ffmpeg
+RUN apt-get update
+RUN apt-get install -y nodejs npm yarnpkg postgresql-client
 
 # Create work dir
 RUN mkdir /app
